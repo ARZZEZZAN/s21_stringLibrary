@@ -19,6 +19,8 @@ The russian version of the task can be found in the repository.
 
 ## Preamble
 
+![s21_string+](misc/eng/images/s21_stringplus.png)
+
 1942, late evening, Bletchley Park, Alan Turing's desk. For almost a year, a group of smartest mathematicians, linguists, and crossword puzzle enthusiasts has been trying to solve the most difficult problem of deciphering the German Enigma encryption machine, the codes for which change every day, and the number of possible combinations is about two to the power of 64. The group often had to come up with different algorithms, and they even developed a special set of keywords and their syntax for the convenience of communication and logging and it’s exactly like the well-known C language in our universe. What a remarkable coincidence! But there was one difficulty – the Bletchley Park workers had to keep the entire sequence of actions described in this language in their heads. 
 
 As you walk past Turing's desk, you notice a sheet that says "For letters, punctuation marks, words, and sentences processing".
@@ -174,27 +176,27 @@ where:
 ## Part 1. Implementation of the string.h library functions
 
 It is necessary to implement the described [above](#stringh-functions) functions of the string.h library: 
- - The library must be developed in C language of C11 standard using gcc compiler. 
+ - The library must be developed in C language of C11 standard using gcc compiler
  - The library's code must be located in the src folder 
  - Make it as a static library (with the header file s21_string.h)
  - The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided
  - Prepare a full coverage of the library's functions by unit-tests using the Check library
- - Provide a Makefile for building the library and tests (with the targets all, clean, test, s21_string.a).
+ - Provide a Makefile for building the library and tests (with the targets all, clean, test, s21_string.a)
  - Use prefix s21_ before each function
- - It is forbidden to copy the implementation of the standard string.h library and other string processing libraries
- - You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that).
+ - It is forbidden to copy the implementation of the standard string.h library and other string processing libraries and to use them
+ - You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that)
  - Functions must work with z-string made of single-byte characters in ASCII encoding.
 
 ## Part 2. Implementation of the sprintf and sscanf functions
 
 It is necessary to implement the sprintf and sscanf functions from the stdio.h library:
  - The functions must be placed in the s21_string.h library
- - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation.
+ - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation
  - Full formatting (including flags, widths, precision, modifiers and conversion types) must be supported.
 
 ## Part 3. Bonus. Implementation of special string processing functions
 
 Bonus assignment for extra points. You must implement some string processing functions from the String class (described [here](#special-string-processing-functions-from-the-string-class-in-c)):
- - The functions must be placed in the s21_string.h library.
+ - The functions must be placed in the s21_string.h library
  - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation, including s21_ before the name.
 
