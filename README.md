@@ -177,7 +177,7 @@ where:
 
 It is necessary to implement the described [above](#stringh-functions) functions of the string.h library: 
  - The library must be developed in C language of C11 standard using gcc compiler
- - The library's code must be located in the src folder 
+ - The library's code and library itself must be located in the src folder
  - Make it as a static library (with the header file s21_string.h)
  - The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided
  - Prepare a full coverage of the library's functions by unit-tests using the Check library
