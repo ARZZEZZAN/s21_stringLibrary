@@ -92,7 +92,7 @@ The only support for strings in the programming language proper is that the comp
 | 11 | char *strcpy(char *dest, const char *src) | Copies the string pointed to, by src to dest. |
 | 12 | char *strncpy(char *dest, const char *src, size_t n) | Copies up to n characters from the string pointed to, by src to dest. |
 | 13 | size_t strcspn(const char *str1, const char *str2) | Calculates the length of the initial segment of str1 which consists entirely of characters not in str2. |
-| 14 | char *strerror(int errnum) | Searches an internal array for the error number errnum and returns a pointer to an error message string. |
+| 14 | char *strerror(int errnum) | Searches an internal array for the error number errnum and returns a pointer to an error message string. You need to declare a macro containing an array of error messages. Error descriptions are available in the original library. |
 | 15 | size_t strlen(const char *str) | Computes the length of the string str up to but not including the terminating null character. |
 | 16 | char *strpbrk(const char *str1, const char *str2) | Finds the first character in the string str1 that matches any character specified in str2. |
 | 17 | char *strrchr(const char *str, int c) | Searches for the last occurrence of the character c (an unsigned char) in the string pointed to by the argument str. |
@@ -181,9 +181,10 @@ It is necessary to implement the described [above](#stringh-functions) functions
  - Make it as a static library (with the header file s21_string.h)
  - The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided
  - Prepare a full coverage of the library's functions by unit-tests using the Check library
+ - Unit-tests must check the results of your implementation by comparing them with the implementation of the standard string.h library
  - Provide a Makefile for building the library and tests (with the targets all, clean, test, s21_string.a)
  - Use prefix s21_ before each function
- - It is forbidden to copy the implementation of the standard string.h library and other string processing libraries and to use them
+ - It is forbidden to copy the implementation of the standard string.h library and other string processing libraries and to use them anywhere, except unit-tests
  - You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that)
  - Functions must work with z-string made of single-byte characters in ASCII encoding.
 
