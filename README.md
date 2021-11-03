@@ -92,7 +92,7 @@ The only support for strings in the programming language proper is that the comp
 | 11 | char *strcpy(char *dest, const char *src) | Copies the string pointed to, by src to dest. |
 | 12 | char *strncpy(char *dest, const char *src, size_t n) | Copies up to n characters from the string pointed to, by src to dest. |
 | 13 | size_t strcspn(const char *str1, const char *str2) | Calculates the length of the initial segment of str1 which consists entirely of characters not in str2. |
-| 14 | char *strerror(int errnum) | Searches an internal array for the error number errnum and returns a pointer to an error message string. You need to declare a macro containing an array of error messages. Error descriptions are available in the original library. |
+| 14 | char *strerror(int errnum) | Searches an internal array for the error number errnum and returns a pointer to an error message string. You need to declare macros containing arrays of error messages for mac and linux operating systems. Error descriptions are available in the original library. Checking the current OS is carried out using directives. |
 | 15 | size_t strlen(const char *str) | Computes the length of the string str up to but not including the terminating null character. |
 | 16 | char *strpbrk(const char *str1, const char *str2) | Finds the first character in the string str1 that matches any character specified in str2. |
 | 17 | char *strrchr(const char *str, int c) | Searches for the last occurrence of the character c (an unsigned char) in the string pointed to by the argument str. |
