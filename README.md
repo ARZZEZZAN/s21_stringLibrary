@@ -127,7 +127,7 @@ where:
 | 12 | x | Unsigned hexadecimal integer | Unsigned hexadecimal integer (any letters) |
 | 13 | X | Unsigned hexadecimal integer (capital letters) | Unsigned hexadecimal integer (any letters) |
 | 14 | p | Pointer address | Pointer address |
-| 15 | n | Nothing printed | Nothing printed |
+| 15 | n | Number of characters printed until %n occurs | Number of characters scanned until %n occurs |
 | 16 | % | Character % | Character % |
 
 ### sprintf Flags
