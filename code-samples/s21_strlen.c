@@ -1,4 +1,4 @@
-typedef unsigned s21_size_t
+typedef long unsigned s21_size_t;
 
 s21_size_t s21_strlen(const char *str)
 {

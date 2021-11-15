@@ -112,15 +112,15 @@ where:
 ### sprintf And sscanf Specifiers
 
 | No. | Specifier | sprintf output | sscanf output |
-| - | - | - | - |
+| --- | --- | --- | --- |
 | 1 | c | Character | Character |
 | 2 | d | Signed decimal integer | Signed decimal integer |
 | 3 | i | Signed decimal integer | Signed integer (may be decimal, octal or hexadecimal) |
 | 4 | e | Scientific notation (mantissa/exponent) using e character (the output of the numbers must match up to e-16) | Decimal floating point or scientific notation (mantissa/exponent) |
 | 5 | E | Scientific notation (mantissa/exponent) using E character | Decimal floating point or scientific notation (mantissa/exponent) |
 | 6 | f | Decimal floating point | Decimal floating point or scientific notation (mantissa/exponent) |
-| 7 | g | Uses the shorter of %e or %f | Decimal floating point or scientific notation (mantissa/exponent) |
-| 8 | G | Uses the shorter of %E or %f | Decimal floating point or scientific notation (mantissa/exponent) |
+| 7 | g | Uses the shortest representation of decimal floating point | Decimal floating point or scientific notation (mantissa/exponent) |
+| 8 | G | Uses the shortest representation of decimal floating point | Decimal floating point or scientific notation (mantissa/exponent) |
 | 9 | o | Unsigned octal | Unsigned octal |
 | 10 | s | String of characters | String of characters |
 | 11 | u | Unsigned decimal integer | Unsigned decimal integer |
@@ -133,7 +133,7 @@ where:
 ### sprintf Flags
 
 | No. | Flags | Description |
-| - | - | - |
+| --- | --- | --- |
 | 1 | - | Left-justify within the given field width; Right justification is the default (see width sub-specifier). |
 | 2 | + | Forces to precede the result with a plus or minus sign (+ or -) even for positive numbers. By default, only negative numbers are preceded with a -ve sign. |
 | 3 | (space) | If no sign is going to be written, a blank space is inserted before the value. |
@@ -143,21 +143,21 @@ where:
 ### sprintf And sscanf Width Description
 
 | No. |	Width | Description |
-| - | - | - |
+| --- | --- | --- |
 | 1	| (number) | Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger. |
 | 2 | * | In sprintf the * sign means, that the width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted. In sscanf the * sign placed after % and before the format specifier reads data of the specified type, but suppresses their assignment. |
 
 ### sprintf Precision Description
 
 | No. |	.precision | Description |
-| - | - | - |
+| --- | --- | --- |
 | 1	| .number | For integer specifiers (d, i, o, u, x, X) − precision specifies the minimum number of digits to be written. If the value to be written is shorter than this number, the result is padded with leading zeros. The value is not truncated even if the result is longer. A precision of 0 means that no character is written for the value 0. For e, E and f specifiers − this is the number of digits to be printed after the decimal point. For g and G specifiers − This is the maximum number of significant digits to be printed. For s − this is the maximum number of characters to be printed. By default all characters are printed until the ending null character is encountered. For c type − it has no effect. When no precision is specified for specifiers e, E, f, g and G, the default one is 6. When no precision is specified for all other kind of specifiers, the default is 1. If the period is specified without an explicit value for precision, 0 is assumed. |
 | 2	| .* | The precision is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted. |
 
 ### sprintf And sscanf Length Description
 
 | No. |	Length | Description |
-| - | - | - |
+| --- | --- | --- |
 | 1 | h | The argument is interpreted as a short int or unsigned short int (only applies to integer specifiers: i, d, o, u, x and X). |
 | 2 | l | The argument is interpreted as a long int or unsigned long int for integer specifiers (i, d, o, u, x and X), and as a wide character or wide character string for specifiers c and s. |
 | 3 | L | The argument is interpreted as a long double (only applies to floating point specifiers − e, E, f, g and G). |
@@ -191,16 +191,32 @@ It is necessary to implement the described [above](#stringh-functions) functions
  - You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that)
  - Functions must work with z-string made of single-byte characters in ASCII encoding.
 
-## Part 2. Implementation of the sprintf and sscanf functions
+## Part 2. Partial implementation of the sprintf function
 
-It is necessary to implement the sprintf and sscanf functions from the stdio.h library:
- - The functions must be placed in the s21_string.h library
- - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation
- - Full formatting (including flags, widths, precision, modifiers and conversion types) must be supported.
+It is necessary to implement the sprintf function from the stdio.h library:
+- The function must be placed in the s21_string.h library
+- All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to function implementation.
+- Partial formatting (including flags, widths, precision, modifiers and conversion types that are not outlined in the bonus part) must be supported.
 
-## Part 3. Bonus. Implementation of special string processing functions
+## Part 3. Bonus. Implementation of some format modifiers of the sprintf function
+
+Bonus assignment for extra points. It is necessary to implement some format modifiers of the sprintf function from the stdio.h library:
+- The function must be placed in the s21_string.h library
+- All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to function implementation.
+- The following format modifiers must be supported: g, G, e, E, x, X, o, n, p, #, 0, *.
+
+
+## Part 4. Bonus. Implementation of the sscanf function
+
+Bonus assignment for extra points. It is necessary to implement the sscanf function from the stdio.h library:
+- The function must be placed in the s21_string.h library
+- All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to function implementation.
+- Full formatting (including flags, widths, precision, modifiers and conversion types) must be supported.
+
+
+## Part 5. Bonus. Implementation of special string processing functions
 
 Bonus assignment for extra points. You must implement some string processing functions from the String class (described [here](#special-string-processing-functions-from-the-string-class-in-c)):
- - The functions must be placed in the s21_string.h library
- - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation, including s21_ before the name.
-
+- The functions must be placed in the s21_string.h library.
+- All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to functions implementation, 
+  excluding the requirement to compare your implementation with the standard.
