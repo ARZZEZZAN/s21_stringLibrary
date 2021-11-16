@@ -13,8 +13,10 @@ The russian version of the task can be found in the repository.
     2.1. [Information](#information)
 3. [Chapter III](#chapter-iii) \
     3.1. [Part 1](#part-1-implementation-of-the-stringh-library-functions)  
-    3.2. [Part 2](#part-2-implementation-of-the-sprintf-and-sscanf-functions)  
-    3.3. [Part 3](#part-3-bonus-implementation-of-special-string-processing-functions)  
+    3.2. [Part 2](#part-2-partial-implementation-of-the-sprintf-function)  
+    3.3. [Part 3](#part-3-bonus-implementation-of-some-format-modifiers-of-the-sprintf-function)  
+    3.4. [Part 4](#part-4-bonus-implementation-of-the-sscanf-function)  
+    3.5. [Part 5](#part-5-bonus-implementation-of-special-string-processing-functions)  
 
 
 ## Preamble
@@ -196,15 +198,24 @@ It is necessary to implement the described [above](#stringh-functions) functions
 It is necessary to implement the sprintf function from the stdio.h library:
 - The function must be placed in the s21_string.h library
 - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to function implementation.
-- Partial formatting (including flags, widths, precision, modifiers and conversion types that are not outlined in the bonus part) must be supported.
+- The next partial formatting must be supported:
+  - Specifiers: c, d, i, f, s, u, %
+  - Flags: -, +, (space)
+  - Width description: (number)
+  - Precision description: .(number)
+  - Length description: h, l
 
 ## Part 3. Bonus. Implementation of some format modifiers of the sprintf function
 
 Bonus assignment for extra points. It is necessary to implement some format modifiers of the sprintf function from the stdio.h library:
 - The function must be placed in the s21_string.h library
 - All of the requirements outlined in [the first part](#part-1-implementation-of-the-stringh-library-functions) are applied to function implementation.
-- The following format modifiers must be supported: g, G, e, E, x, X, o, n, p, #, 0, *.
-
+- The next additional format modifiers must be supported:
+  - Specifiers: g, G, e, E, x, X, o, n, p
+  - Flags: #, 0
+  - Width description: *
+  - Precision description: .*
+  - Length description: L
 
 ## Part 4. Bonus. Implementation of the sscanf function
 
