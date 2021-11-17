@@ -190,6 +190,7 @@ It is necessary to implement the described [above](#stringh-functions) functions
  - The gcov_report target should generate a gcov report in the form of an html page. Unit tests must be run with gcov flags to do this
  - Use prefix s21_ before each function
  - It is forbidden to copy the implementation of the standard string.h library and other string processing libraries and to use them anywhere, except unit-tests
+ - It is forbidden to use system errors arrays, including those not specified in POSIX (sys_nerr, sys_errlist). Instead, you need to implement your own platform-specific errors arrays, as it was mentioned in the description of the [strerror function](#stringh-functions)  
  - You must follow the logic of the standard string.h library (in terms of checks, working with memory and behavior in emergency situations - tests will help you with that)
  - Functions must work with z-string made of single-byte characters in ASCII encoding.
 
