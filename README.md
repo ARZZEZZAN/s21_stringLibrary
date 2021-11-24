@@ -118,7 +118,7 @@ where:
 | 1 | c | Character | Character |
 | 2 | d | Signed decimal integer | Signed decimal integer |
 | 3 | i | Signed decimal integer | Signed integer (may be decimal, octal or hexadecimal) |
-| 4 | e | Scientific notation (mantissa/exponent) using e character (the output of the numbers must match up to e-16) | Decimal floating point or scientific notation (mantissa/exponent) |
+| 4 | e | Scientific notation (mantissa/exponent) using e character (the output of the numbers must match up to e-6) | Decimal floating point or scientific notation (mantissa/exponent) |
 | 5 | E | Scientific notation (mantissa/exponent) using E character | Decimal floating point or scientific notation (mantissa/exponent) |
 | 6 | f | Decimal floating point | Decimal floating point or scientific notation (mantissa/exponent) |
 | 7 | g | Uses the shortest representation of decimal floating point | Decimal floating point or scientific notation (mantissa/exponent) |
@@ -180,10 +180,11 @@ where:
 
 It is necessary to implement the described [above](#stringh-functions) functions of the string.h library: 
  - The library must be developed in C language of C11 standard using gcc compiler
- - The library's code and library itself must be located in the src folder
+ - The library's code, makefile and library itself must be located in the src folder on the develop branch     
  - Make it as a static library (with the header file s21_string.h)
  - The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided
  - Prepare a full coverage of the library's functions by unit-tests using the Check library
+ - Test's code and the executable file must be located in the src folder or its any subfolder
  - Unit-tests must check the results of your implementation by comparing them with the implementation of the standard string.h library
  - Unit tests must cover at least 80% of each function (checked using gcov)
  - Provide a Makefile for building the library and tests (with the targets all, clean, test, s21_string.a, gcov_report)
