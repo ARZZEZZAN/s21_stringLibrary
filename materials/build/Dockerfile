@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM quay.io/school21/alpine:3.13
 
 RUN apk --no-cache --upgrade add \
     git \
