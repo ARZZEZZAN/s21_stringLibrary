@@ -84,7 +84,7 @@
 | 1 | void *memchr(const void *str, int c, size_t n) | Выполняет поиск первого вхождения символа c (беззнаковый тип) в первых n байтах строки, на которую указывает аргумент str. |
 | 2 | int memcmp(const void *str1, const void *str2, size_t n) | Сравнивает первые n байтов str1 и str2. |
 | 3 | void *memcpy(void *dest, const void *src, size_t n) | Копирует n символов из src в dest. |
-| 4 | void *memmove(void *dest, const void *src, size_t n) | Еще одна функция для копирования n символов из str2 в str1. |
+| 4 | void *memmove(void *dest, const void *src, size_t n) | Еще одна функция для копирования n символов из src в dest. |
 | 5 | void *memset(void *str, int c, size_t n) | Копирует символ c (беззнаковый тип) в первые n символов строки, на которую указывает аргумент str. |
 | 6 | char *strcat(char *dest, const char *src) | Добавляет строку, на которую указывает src, в конец строки, на которую указывает dest. |
 | 7 | char *strncat(char *dest, const char *src, size_t n) | Добавляет строку, на которую указывает src, в конец строки, на которую указывает dest, длиной до n символов. |
