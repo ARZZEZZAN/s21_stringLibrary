@@ -182,6 +182,7 @@ It is necessary to implement the described [above](#stringh-functions) functions
  - The library must be developed in C language of C11 standard using gcc compiler
  - The library's code, including headers, makefile and library itself must be located in the src folder on the develop branch    
  - Do not use outdated and legacy language constructions and library functions. Pay attention to the legacy and obsolete marks in the official documentation on the language and the libraries used. Use the POSIX.1-2017 standard. 
+ - When writing code it is necessary to follow the Google style
  - Make it as a static library (with the header file s21_string.h)
  - The library must be developed in accordance with the principles of structured programming, duplication in the code must be avoided
  - Prepare a full coverage of the library's functions by unit-tests using the Check library
