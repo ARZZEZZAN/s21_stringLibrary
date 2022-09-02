@@ -4,11 +4,10 @@ In addition to testing for correct output data, the autotest system will check y
 following points:
 
 * **Style tests.** To check how much the beauty of your code meets the standards, for example, you can test your code
-  using the
-  _clang-format_ utility. The ```materials/``` folder contains the ```.clang-format``` file, which contains the
-  necessary settings for the style test. This configuration file extends its action to all files that lie with it in the
-  directory or in the directories below. So in order for these settings to apply to your source code files,
-  copy ```.clang-format``` to the ```src``` folder. \
+  using the _clang-format_ utility. The ```materials/linters``` folder contains the ```.clang-format``` file, which
+  contains the necessary settings for the style test. This configuration file extends its action to all files that lie
+  with it in the directory or in the directories below. So in order for these settings to apply to your source code
+  files, copy ```.clang-format``` to the ```src``` folder. \
   \
   To run the style check, run the following command: \
   ```clang-format -n src/sourcefile_name.c``` \
@@ -46,6 +45,6 @@ following points:
   Use the ```-exclude``` option of _leaks_ to filter out leaks in functions with known memory leaks. This option helps
   reduce the amount of extra information reported by _leaks_.
 
-* **Build test** The program can be checked for correct build on a test system environment. This will require Docker
+* **Build test.** The program can be checked for correct build on a test system environment. This will require _Docker_
   installed. If the system has a docker, then you can go to the `materials/build` directory and run the run.sh script
   from there. The script will wrap your solution in docker and run it along with a typical build script.
